@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
     }
 
-    // MARK: - Outlets
+    // MARK: - Properties
     @IBOutlet weak var countLabel: UILabel!
     var count = 0
     
@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         increaseCount()
     }
 
-    
+    // MARK: - Functions
     func increaseCount() {
         count += 1
         countLabel.text = String(count)

@@ -18,19 +18,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cxz-P6-5Hi">
-                                <rect key="frame" x="211" y="228" width="48" height="144"/>
+                                <rect key="frame" x="211" y="228" width="153" height="144"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6rv-03-hbz">
-                                        <rect key="frame" x="1" y="0.0" width="47" height="96"/>
+                                        <rect key="frame" x="53" y="0.0" width="47" height="96"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="80"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0jv-YI-ha4">
-                                        <rect key="frame" x="0.0" y="96" width="48" height="48"/>
+                                        <rect key="frame" x="0.0" y="96" width="153" height="48"/>
                                         <gestureRecognizers/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="Tap"/>
+                                        <state key="normal" title="Tap or Hold"/>
                                         <connections>
                                             <action selector="tapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pbR-4k-jbu"/>
                                             <outletCollection property="gestureRecognizers" destination="83e-xo-R16" appends="YES" id="6fA-Ju-VZ9"/>
