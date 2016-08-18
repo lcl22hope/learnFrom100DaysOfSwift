@@ -21,7 +21,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Qqz-8s-96L">
                                 <rect key="frame" x="20" y="109" width="560" height="222"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="$0.00" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wza-Qn-cKG">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="$0.00" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wza-Qn-cKG">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="90"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="75"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
@@ -30,7 +30,7 @@
                                         <rect key="frame" x="0.0" y="110" width="560" height="21"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip(15%):" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N06-KY-P7y">
-                                                <rect key="frame" x="0.0" y="0.0" width="470" height="21"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="465" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="aSa-3w-Qpr"/>
                                                     <constraint firstAttribute="width" constant="490" id="b1q-qd-Q9h"/>
@@ -45,9 +45,9 @@
                                                 </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrf-pU-u9d">
-                                                <rect key="frame" x="490" y="0.0" width="70" height="21"/>
+                                                <rect key="frame" x="485" y="0.0" width="75" height="21"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="70" id="Cxy-mG-bf7"/>
+                                                    <constraint firstAttribute="width" constant="75" id="Cxy-mG-bf7"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -59,7 +59,7 @@
                                         <rect key="frame" x="0.0" y="151" width="560" height="21"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kyG-Nt-6Cr">
-                                                <rect key="frame" x="0.0" y="0.0" width="470" height="21"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="465" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="490" id="RMw-CV-Zy1"/>
                                                     <constraint firstAttribute="height" constant="21" id="YxK-Gc-lYa"/>
@@ -74,9 +74,9 @@
                                                 </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vIz-Fp-3uK">
-                                                <rect key="frame" x="490" y="0.0" width="70" height="21"/>
+                                                <rect key="frame" x="485" y="0.0" width="75" height="21"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="70" id="rmN-Yh-VUG"/>
+                                                    <constraint firstAttribute="width" constant="75" id="rmN-Yh-VUG"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -84,8 +84,11 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="di8-yF-y6V">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="di8-yF-y6V">
                                         <rect key="frame" x="-2" y="192" width="564" height="31"/>
+                                        <connections>
+                                            <action selector="slideTipSliderChangeValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="8F4-u4-Lv3"/>
+                                        </connections>
                                     </slider>
                                 </subviews>
                             </stackView>
@@ -99,12 +102,16 @@
                     </view>
                     <navigationItem key="navigationItem" title="Tip Calculator" id="uNj-pL-0Ug"/>
                     <connections>
+                        <outlet property="subtotalLabel" destination="vIz-Fp-3uK" id="n5A-oh-OCP"/>
                         <outlet property="subtotalTextField" destination="wza-Qn-cKG" id="1x5-7v-iRS"/>
+                        <outlet property="tipLabel" destination="nrf-pU-u9d" id="xTX-7E-r8T"/>
+                        <outlet property="tipPercentLabel" destination="N06-KY-P7y" id="GO9-42-8Ji"/>
+                        <outlet property="tipSlider" destination="di8-yF-y6V" id="qM6-vw-uEP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1171" y="305"/>
+            <point key="canvasLocation" x="1123" y="276"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hWo-ox-jQM">
