@@ -10,16 +10,27 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK: - Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        refreshDate()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    // MARK: - Outlets
+    @IBOutlet weak var dateLabel: UILabel!
+    
+    
+    // MARK: - Interactions
+    @IBAction func refreshButtonTap(sender: UIButton) {
+        refreshDate()
     }
-
-
+    
+    // MARK: - Functions
+    func refreshDate() {
+        dateLabel.text = NSDateFormatter.localizedStringFromDate(
+            NSDate(),
+            dateStyle: NSDateFormatterStyle.MediumStyle,
+            timeStyle: NSDateFormatterStyle.MediumStyle)
+    }
 }
 

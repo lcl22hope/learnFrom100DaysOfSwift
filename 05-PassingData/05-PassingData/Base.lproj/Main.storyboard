@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ECJ-VT-7hj">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--FirstView-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="_5_PassingData" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j1a-Kt-bhw">
+                                <rect key="frame" x="20" y="84" width="560" height="516"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="j1a-Kt-bhw" secondAttribute="bottom" id="4mu-sQ-olU"/>
+                            <constraint firstItem="j1a-Kt-bhw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="NMD-al-2cC"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="j1a-Kt-bhw" secondAttribute="bottom" id="gcf-mj-UC7"/>
+                            <constraint firstItem="j1a-Kt-bhw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="jju-xH-NL5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="j1a-Kt-bhw" secondAttribute="trailing" id="lrY-9p-Q3v"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="FirstView" id="N2K-Xi-UXz">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="MLc-Z9-Ad3">
+                            <connections>
+                                <segue destination="UjP-Pe-xoS" kind="show" id="LWg-Fv-Lzk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="textView" destination="j1a-Kt-bhw" id="G6r-NR-lCd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1102" y="380"/>
+        </scene>
+        <!--SecondView-->
+        <scene sceneID="flr-ah-h8S">
+            <objects>
+                <viewController id="UjP-Pe-xoS" customClass="SecondViewController" customModule="_5_PassingData" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mn5-vR-VNV"/>
+                        <viewControllerLayoutGuide type="bottom" id="JLl-Y4-vzI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="k1a-Uj-b2b">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gno-fo-d3I">
+                                <rect key="frame" x="20" y="64" width="560" height="56"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="21"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="gno-fo-d3I" secondAttribute="trailing" id="1SO-0F-hWV"/>
+                            <constraint firstItem="gno-fo-d3I" firstAttribute="top" secondItem="mn5-vR-VNV" secondAttribute="bottom" id="MMC-DD-yXh"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="gno-fo-d3I" secondAttribute="bottom" constant="480" id="PL8-yH-GQM"/>
+                            <constraint firstItem="gno-fo-d3I" firstAttribute="leading" secondItem="k1a-Uj-b2b" secondAttribute="leadingMargin" id="kpd-3g-1cp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="SecondView" id="c7P-NR-ZMW"/>
+                    <connections>
+                        <outlet property="sendMsgLabel" destination="gno-fo-d3I" id="Gu9-nL-Np4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T78-AC-ihG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1790" y="380"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="odj-XV-o25">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ECJ-VT-7hj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4K4-Gs-ZBR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="wyB-lh-dGn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Uy-XT-db3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="385" y="389"/>
+        </scene>
+    </scenes>
+</document>
