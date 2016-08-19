@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Rct-wb-8Kr">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Groceries-->
+        <scene sceneID="9tV-ZA-hMj">
+            <objects>
+                <tableViewController id="q0F-Pj-pGO" customClass="Groceries_TableViewController" customModule="_7_BasicTableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="zrO-mm-WnH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="groceryCellId" id="WB9-3Y-d5W">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WB9-3Y-d5W" id="LnW-Fe-dqq">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="q0F-Pj-pGO" id="wpN-t8-Ger"/>
+                            <outlet property="delegate" destination="q0F-Pj-pGO" id="zZO-9F-8Fl"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Groceries" id="P1X-lV-soy">
+                        <barButtonItem key="leftBarButtonItem" title="Edit" id="suk-qY-7nM"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="yWA-7Y-OvP"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BMO-YK-uP2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1101" y="416"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jwS-QV-UYf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rct-wb-8Kr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Ks-Ez-75G">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="q0F-Pj-pGO" kind="relationship" relationship="rootViewController" id="Fii-L3-9SJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uih-ZR-S6F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="371" y="416"/>
+        </scene>
+    </scenes>
+</document>
