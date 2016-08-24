@@ -15,6 +15,8 @@
 		9333458D1D6DC121004626B1 /* SaveDateLocationPhoto.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9333458B1D6DC121004626B1 /* SaveDateLocationPhoto.xcdatamodeld */; };
 		933345901D6DC172004626B1 /* Timeline+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9333458E1D6DC172004626B1 /* Timeline+CoreDataProperties.swift */; };
 		933345911D6DC172004626B1 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9333458F1D6DC172004626B1 /* Timeline.swift */; };
+		933345951D6DDD0C004626B1 /* TimeLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933345941D6DDD0C004626B1 /* TimeLineTableViewCell.swift */; };
+		933345971D6DDD1F004626B1 /* TimeLineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933345961D6DDD1F004626B1 /* TimeLineTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		9333458C1D6DC121004626B1 /* SaveDateLocationPhoto.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SaveDateLocationPhoto.xcdatamodel; sourceTree = "<group>"; };
 		9333458E1D6DC172004626B1 /* Timeline+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Timeline+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9333458F1D6DC172004626B1 /* Timeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
+		933345941D6DDD0C004626B1 /* TimeLineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineTableViewCell.swift; sourceTree = "<group>"; };
+		933345961D6DDD1F004626B1 /* TimeLineTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 			children = (
 				933345791D6D809F004626B1 /* AppDelegate.swift */,
 				9333457B1D6D809F004626B1 /* ViewController.swift */,
+				933345961D6DDD1F004626B1 /* TimeLineTableViewController.swift */,
+				933345941D6DDD0C004626B1 /* TimeLineTableViewCell.swift */,
 				9333457D1D6D809F004626B1 /* Main.storyboard */,
 				933345801D6D809F004626B1 /* Assets.xcassets */,
 				933345821D6D809F004626B1 /* LaunchScreen.storyboard */,
@@ -154,6 +160,8 @@
 			files = (
 				9333457C1D6D809F004626B1 /* ViewController.swift in Sources */,
 				9333458D1D6DC121004626B1 /* SaveDateLocationPhoto.xcdatamodeld in Sources */,
+				933345971D6DDD1F004626B1 /* TimeLineTableViewController.swift in Sources */,
+				933345951D6DDD0C004626B1 /* TimeLineTableViewCell.swift in Sources */,
 				933345901D6DC172004626B1 /* Timeline+CoreDataProperties.swift in Sources */,
 				933345911D6DC172004626B1 /* Timeline.swift in Sources */,
 				9333457A1D6D809F004626B1 /* AppDelegate.swift in Sources */,

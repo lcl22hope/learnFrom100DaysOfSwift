@@ -64,6 +64,7 @@ class ViewController: UIViewController , CLLocationManagerDelegate, UIImagePicke
     // MARK: - Interactions
     @IBAction func tapDoneButton(sender: UIBarButtonItem) {
         saveEntry()
+        dismissView()
     }
 
     @IBAction func tapCameraButton(sender: UIButton) {
@@ -128,6 +129,10 @@ class ViewController: UIViewController , CLLocationManagerDelegate, UIImagePicke
         dateFormatter.dateFormat = "MMMM dd, yyyy 'at' hh:mm a"
         let curDateStr = dateFormatter.stringFromDate(date)
         return curDateStr
+    }
+    
+    func dismissView() {
+        navigationController?.popViewControllerAnimated(true)
     }
 }
 

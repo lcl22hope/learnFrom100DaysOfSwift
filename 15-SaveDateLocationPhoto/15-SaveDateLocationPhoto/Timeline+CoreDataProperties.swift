@@ -19,4 +19,11 @@ extension Timeline {
     @NSManaged var image: NSData?
     @NSManaged var location: String?
 
+    
+    func dateAsSectionName() -> String{
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "MMMM yyyy"
+        let dateAsString = dateFormatter.stringFromDate(date!)
+        return dateAsString
+    }
 }
