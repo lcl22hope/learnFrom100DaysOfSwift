@@ -21,17 +21,17 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="QuT-3M-Xx1">
                                 <rect key="frame" x="20" y="0.0" width="560" height="536"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cl6-aU-uZd">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cl6-aU-uZd">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="186"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24W-sU-bcx">
                                                 <rect key="frame" x="0.0" y="0.0" width="560" height="17"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LU1-uk-0lp">
-                                                <rect key="frame" x="0.0" y="17" width="560" height="169"/>
+                                                <rect key="frame" x="0.0" y="27" width="560" height="159"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut </string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -68,6 +68,54 @@
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="gG0-Gd-QUc">
+                    <rect key="frame" x="0.0" y="0.0" width="560" height="50"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Q7-oS-b0w">
+                            <rect key="frame" x="8" y="2" width="46" height="46"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="46" id="Ikz-rq-ljv"/>
+                                <constraint firstAttribute="height" constant="46" id="iXZ-cR-gis"/>
+                            </constraints>
+                            <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="Button" image="camera"/>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kQS-wI-pfy">
+                            <rect key="frame" x="506" y="2" width="46" height="46"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="46" id="PlC-T2-nzf"/>
+                                <constraint firstAttribute="height" constant="46" id="yc0-fm-WJJ"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="drV-XO-aaO">
+                            <rect key="frame" x="456" y="14" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2O-vu-t0F">
+                            <rect key="frame" x="56" y="2" width="46" height="46"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="46" id="5tZ-Ln-REl"/>
+                                <constraint firstAttribute="width" constant="46" id="G5U-Tr-VSo"/>
+                            </constraints>
+                            <inset key="contentEdgeInsets" minX="13" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="Button" image="location"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Y2O-vu-t0F" secondAttribute="bottom" constant="2" id="Axg-u5-8IF"/>
+                        <constraint firstItem="9Q7-oS-b0w" firstAttribute="leading" secondItem="gG0-Gd-QUc" secondAttribute="leading" constant="8" id="BEQ-kN-ehH"/>
+                        <constraint firstAttribute="bottom" secondItem="kQS-wI-pfy" secondAttribute="bottom" constant="2" id="GaB-hz-UCq"/>
+                        <constraint firstItem="kQS-wI-pfy" firstAttribute="leading" secondItem="drV-XO-aaO" secondAttribute="trailing" constant="8" id="TsI-Mf-n7w"/>
+                        <constraint firstAttribute="bottom" secondItem="drV-XO-aaO" secondAttribute="bottom" constant="15" id="eMe-cp-ob6"/>
+                        <constraint firstAttribute="bottom" secondItem="9Q7-oS-b0w" secondAttribute="bottom" constant="2" id="kga-KI-huH"/>
+                        <constraint firstAttribute="trailing" secondItem="kQS-wI-pfy" secondAttribute="trailing" constant="8" id="m6o-6p-PXk"/>
+                        <constraint firstItem="Y2O-vu-t0F" firstAttribute="leading" secondItem="9Q7-oS-b0w" secondAttribute="trailing" constant="2" id="viw-Oj-fg5"/>
+                    </constraints>
+                </view>
             </objects>
             <point key="canvasLocation" x="1048" y="385"/>
         </scene>
@@ -91,4 +139,8 @@
             <point key="canvasLocation" x="236" y="385"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera" width="25" height="19"/>
+        <image name="location" width="19" height="19"/>
+    </resources>
 </document>
