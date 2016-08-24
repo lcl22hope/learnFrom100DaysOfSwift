@@ -16,11 +16,11 @@ class ViewController: UIViewController , CLLocationManagerDelegate, UIImagePicke
         super.viewDidLoad()
         newEntryTextView.becomeFirstResponder()
         newEntryTextView.inputAccessoryView = newEntryInputAccessoryView
-        
         locationManager.delegate = self
+        newEntryDateLabel.text = "\(getCurrentDate())"
     }
     
-    // MARK: - Properties
+    // MARK - Properties
     let locationManager = CLLocationManager()
     let dateFormatter = NSDateFormatter()
 
@@ -92,6 +92,13 @@ class ViewController: UIViewController , CLLocationManagerDelegate, UIImagePicke
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
+    }
+    
+    func getCurrentDate() -> String {
+        let date = NSDate()
+        dateFormatter.dateFormat = "MMMM dd, yyyy 'at' hh:mm a"
+        let curDateStr = dateFormatter.stringFromDate(date)
+        return curDateStr
     }
 }
 
