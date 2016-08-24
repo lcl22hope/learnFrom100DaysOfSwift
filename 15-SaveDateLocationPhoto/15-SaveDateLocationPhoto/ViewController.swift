@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+import CoreData
 
 class ViewController: UIViewController , CLLocationManagerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
@@ -32,9 +33,37 @@ class ViewController: UIViewController , CLLocationManagerDelegate, UIImagePicke
     @IBOutlet weak var newEntryInputAccessoryView: UIView!
     
     
+    // MARK: - CoreData
+    let managerObjectCtx = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+    
+    func saveEntry() {
+        if newEntryTextView.text.characters.count > 0 {
+            let timeline = NSEntityDescription.insertNewObjectForEntityForName("Timeline", inManagedObjectContext: self.managerObjectCtx) as! Timeline
+            
+            timeline.entry = newEntryTextView.text
+            timeline.date = NSDate()
+            
+            if newEntryLocationLabel.text?.characters.count > 0 {
+                timeline.location = newEntryLocationLabel.text
+            }
+            
+            if let image = newEntryPhotoImageView.image {
+                timeline.image = UIImageJPEGRepresentation(image, 0.75)
+            }
+        }
+
+        do {
+            try self.managerObjectCtx.save()
+        } catch {
+            fatalError("Failure to save context: \(error)")
+        }
+        
+    }
+    
+    
     // MARK: - Interactions
     @IBAction func tapDoneButton(sender: UIBarButtonItem) {
-        
+        saveEntry()
     }
 
     @IBAction func tapCameraButton(sender: UIButton) {
