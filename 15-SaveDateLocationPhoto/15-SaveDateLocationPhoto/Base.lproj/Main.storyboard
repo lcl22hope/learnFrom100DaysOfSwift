@@ -22,16 +22,19 @@
                                 <rect key="frame" x="20" y="0.0" width="560" height="536"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cl6-aU-uZd">
-                                        <rect key="frame" x="0.0" y="0.0" width="560" height="186"/>
+                                        <rect key="frame" x="0.0" y="10" width="560" height="186"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24W-sU-bcx">
-                                                <rect key="frame" x="0.0" y="0.0" width="560" height="17"/>
-                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="560" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="yYT-jV-NZT"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LU1-uk-0lp">
-                                                <rect key="frame" x="0.0" y="27" width="560" height="159"/>
+                                                <rect key="frame" x="0.0" y="31" width="560" height="155"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut </string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -45,7 +48,7 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="cl6-aU-uZd" firstAttribute="top" secondItem="QuT-3M-Xx1" secondAttribute="top" id="89s-VO-Edu"/>
+                                    <constraint firstItem="cl6-aU-uZd" firstAttribute="top" secondItem="QuT-3M-Xx1" secondAttribute="top" constant="10" id="89s-VO-Edu"/>
                                     <constraint firstAttribute="bottom" secondItem="cl6-aU-uZd" secondAttribute="bottom" id="Bj5-CB-FbN"/>
                                     <constraint firstItem="cl6-aU-uZd" firstAttribute="centerX" secondItem="QuT-3M-Xx1" secondAttribute="centerX" id="Rc7-ka-iR0"/>
                                     <constraint firstItem="cl6-aU-uZd" firstAttribute="leading" secondItem="QuT-3M-Xx1" secondAttribute="leading" id="dJ2-6q-uBi"/>
@@ -64,8 +67,18 @@
                     <navigationItem key="navigationItem" title="New Entry" id="w2m-Cg-2sy">
                         <barButtonItem key="rightBarButtonItem" title="Done" id="ZQm-Yw-9Rk">
                             <color key="tintColor" red="0.11372549019607843" green="0.65490196078431373" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="tapDoneButton:" destination="BYZ-38-t0r" id="0ck-To-tCL"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="newEntryDateLabel" destination="24W-sU-bcx" id="LnT-2C-zDm"/>
+                        <outlet property="newEntryInputAccessoryView" destination="gG0-Gd-QUc" id="h4m-bA-41D"/>
+                        <outlet property="newEntryLocationLabel" destination="drV-XO-aaO" id="wwu-44-9Vh"/>
+                        <outlet property="newEntryPhotoImageView" destination="kQS-wI-pfy" id="v2p-mj-i2g"/>
+                        <outlet property="newEntryTextView" destination="LU1-uk-0lp" id="REV-kw-Knd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <view contentMode="scaleToFill" id="gG0-Gd-QUc">
@@ -80,6 +93,9 @@
                             </constraints>
                             <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                             <state key="normal" title="Button" image="camera"/>
+                            <connections>
+                                <action selector="tapCameraButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ixr-wR-zCH"/>
+                            </connections>
                         </button>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kQS-wI-pfy">
                             <rect key="frame" x="506" y="2" width="46" height="46"/>
@@ -102,6 +118,9 @@
                             </constraints>
                             <inset key="contentEdgeInsets" minX="13" minY="0.0" maxX="0.0" maxY="0.0"/>
                             <state key="normal" title="Button" image="location"/>
+                            <connections>
+                                <action selector="tapLocateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="czx-s4-b3q"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
