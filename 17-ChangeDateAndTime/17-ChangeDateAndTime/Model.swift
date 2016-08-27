@@ -8,6 +8,10 @@
 
 import UIKit
 
+var model = Model()
+
 class Model: NSObject {
 
+    var date: NSDate?
+    var time: NSDate?
 }

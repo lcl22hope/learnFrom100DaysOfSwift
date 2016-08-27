@@ -10,26 +10,29 @@ import UIKit
 
 class TitleViewController: UIViewController {
 
+    // MARK: - View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        if let indexPath = selectedIndex {
+            let row = model.posts[indexPath.row]
+            title = row["title"]
+            photoImageView.image = UIImage(named: row["photoName"]!)
+            likesLabel.text = "♥︎ \(row["likes"]!) likes"
+            contentLabel.text = row["description"]
+            tagsLabel.text = row["tags"]
+        }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    // MARK: - Outlets
+    @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var likesLabel: UILabel!
+    @IBOutlet weak var tagsLabel: UILabel!
+    @IBOutlet weak var contentLabel: UILabel!
     
+    // MARK: - Properties
+    var selectedIndex : NSIndexPath?
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

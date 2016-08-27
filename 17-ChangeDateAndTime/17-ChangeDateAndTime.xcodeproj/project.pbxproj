@@ -12,6 +12,8 @@
 		9371393B1D6EC45100113CA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 937139391D6EC45100113CA1 /* Main.storyboard */; };
 		9371393D1D6EC45100113CA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9371393C1D6EC45100113CA1 /* Assets.xcassets */; };
 		937139401D6EC45100113CA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9371393E1D6EC45100113CA1 /* LaunchScreen.storyboard */; };
+		937139481D6EC97800113CA1 /* SetDateTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937139471D6EC97800113CA1 /* SetDateTimeViewController.swift */; };
+		9371394A1D6ED69C00113CA1 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937139491D6ED69C00113CA1 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		9371393C1D6EC45100113CA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9371393F1D6EC45100113CA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		937139411D6EC45100113CA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		937139471D6EC97800113CA1 /* SetDateTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetDateTimeViewController.swift; sourceTree = "<group>"; };
+		937139491D6ED69C00113CA1 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +60,12 @@
 			children = (
 				937139351D6EC45100113CA1 /* AppDelegate.swift */,
 				937139371D6EC45100113CA1 /* ViewController.swift */,
+				937139471D6EC97800113CA1 /* SetDateTimeViewController.swift */,
 				937139391D6EC45100113CA1 /* Main.storyboard */,
 				9371393C1D6EC45100113CA1 /* Assets.xcassets */,
 				9371393E1D6EC45100113CA1 /* LaunchScreen.storyboard */,
 				937139411D6EC45100113CA1 /* Info.plist */,
+				937139491D6ED69C00113CA1 /* Model.swift */,
 			);
 			path = "17-ChangeDateAndTime";
 			sourceTree = "<group>";
@@ -136,7 +142,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				937139381D6EC45100113CA1 /* ViewController.swift in Sources */,
+				937139481D6EC97800113CA1 /* SetDateTimeViewController.swift in Sources */,
 				937139361D6EC45100113CA1 /* AppDelegate.swift in Sources */,
+				9371394A1D6ED69C00113CA1 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

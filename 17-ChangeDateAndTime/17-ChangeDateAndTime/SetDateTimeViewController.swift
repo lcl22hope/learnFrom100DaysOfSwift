@@ -12,24 +12,34 @@ class SetDateTimeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        dateLabel.text = "Today is : \(getCurrentDate())"
+    
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
+    // MARK - Outlets
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var timePicker: UIDatePicker!
+    
+    // MARK: - Interactions
+    @IBAction func tapCancelButton(sender: UIBarButtonItem) {
+        dismissView()
+    }
+    
+    @IBAction func tapDoneButton(sender: UIBarButtonItem) {
+        dismissView()
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // MARK: - Functions
+    func dismissView() {
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
-    */
-
+    
+    func getCurrentDate() -> String {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateStyle = .LongStyle
+        let currentDateAsString = dateFormatter.stringFromDate(NSDate())
+        return currentDateAsString    }
 }

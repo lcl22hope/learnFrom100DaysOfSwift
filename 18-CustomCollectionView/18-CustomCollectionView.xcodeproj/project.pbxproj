@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		937139581D6F131E00113CA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937139571D6F131E00113CA1 /* AppDelegate.swift */; };
-		9371395A1D6F131E00113CA1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937139591D6F131E00113CA1 /* ViewController.swift */; };
 		9371395D1D6F131E00113CA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9371395B1D6F131E00113CA1 /* Main.storyboard */; };
 		9371395F1D6F131E00113CA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9371395E1D6F131E00113CA1 /* Assets.xcassets */; };
 		937139621D6F131E00113CA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 937139601D6F131E00113CA1 /* LaunchScreen.storyboard */; };
+		9371396A1D6F149F00113CA1 /* Unsplash License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 937139691D6F149F00113CA1 /* Unsplash License.txt */; };
+		9371396C1D6F14BE00113CA1 /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9371396B1D6F14BE00113CA1 /* PhotosCollectionViewController.swift */; };
+		9371396E1D6F150700113CA1 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9371396D1D6F150700113CA1 /* Model.swift */; };
+		937139701D6F166D00113CA1 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9371396F1D6F166D00113CA1 /* PhotoCollectionViewCell.swift */; };
+		937139721D6F20F000113CA1 /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937139711D6F20F000113CA1 /* TitleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		937139541D6F131E00113CA1 /* 18-CustomCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "18-CustomCollectionView.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		937139571D6F131E00113CA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		937139591D6F131E00113CA1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9371395C1D6F131E00113CA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9371395E1D6F131E00113CA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		937139611D6F131E00113CA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		937139631D6F131E00113CA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		937139691D6F149F00113CA1 /* Unsplash License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Unsplash License.txt"; sourceTree = "<group>"; };
+		9371396B1D6F14BE00113CA1 /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
+		9371396D1D6F150700113CA1 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		9371396F1D6F166D00113CA1 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		937139711D6F20F000113CA1 /* TitleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +63,15 @@
 			isa = PBXGroup;
 			children = (
 				937139571D6F131E00113CA1 /* AppDelegate.swift */,
-				937139591D6F131E00113CA1 /* ViewController.swift */,
+				9371396D1D6F150700113CA1 /* Model.swift */,
+				9371396B1D6F14BE00113CA1 /* PhotosCollectionViewController.swift */,
+				9371396F1D6F166D00113CA1 /* PhotoCollectionViewCell.swift */,
+				937139711D6F20F000113CA1 /* TitleViewController.swift */,
 				9371395B1D6F131E00113CA1 /* Main.storyboard */,
 				9371395E1D6F131E00113CA1 /* Assets.xcassets */,
 				937139601D6F131E00113CA1 /* LaunchScreen.storyboard */,
 				937139631D6F131E00113CA1 /* Info.plist */,
+				937139691D6F149F00113CA1 /* Unsplash License.txt */,
 			);
 			path = "18-CustomCollectionView";
 			sourceTree = "<group>";
@@ -125,6 +137,7 @@
 				937139621D6F131E00113CA1 /* LaunchScreen.storyboard in Resources */,
 				9371395F1D6F131E00113CA1 /* Assets.xcassets in Resources */,
 				9371395D1D6F131E00113CA1 /* Main.storyboard in Resources */,
+				9371396A1D6F149F00113CA1 /* Unsplash License.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,8 +148,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9371395A1D6F131E00113CA1 /* ViewController.swift in Sources */,
+				9371396E1D6F150700113CA1 /* Model.swift in Sources */,
+				937139701D6F166D00113CA1 /* PhotoCollectionViewCell.swift in Sources */,
 				937139581D6F131E00113CA1 /* AppDelegate.swift in Sources */,
+				9371396C1D6F14BE00113CA1 /* PhotosCollectionViewController.swift in Sources */,
+				937139721D6F20F000113CA1 /* TitleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
