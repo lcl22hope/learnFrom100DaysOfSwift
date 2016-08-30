@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Roboto-Light.ttf">
+            <string>Roboto-Light</string>
+            <string>Roboto-Light</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_3_SpringAnimations" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ujX-fg-44S">
+                                <rect key="frame" x="145" y="262" width="311" height="49"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="C7Y-4c-2iq"/>
+                                    <constraint firstAttribute="width" constant="311" id="ZbV-bg-9L4"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search logo" translatesAutoresizingMaskIntoConstraints="NO" id="y8o-xU-Wjf">
+                                <rect key="frame" x="212" y="282" width="175" height="35"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbB-7F-MRE">
+                                <rect key="frame" x="268" y="362" width="65" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="4JK-HF-Djs"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="65" id="7HL-JK-Urk"/>
+                                    <constraint firstAttribute="height" constant="66" id="HMH-zV-9cU"/>
+                                    <constraint firstAttribute="height" constant="66" id="O9q-ef-sdN"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="66" id="Qm8-1r-NUr"/>
+                                    <constraint firstAttribute="width" constant="65" id="Rpn-R8-R3l"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="65" id="m1Z-xb-VMq"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="66" id="o8O-uF-JJL"/>
+                                </constraints>
+                                <state key="normal" image="mic button"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="4JK-HF-Djs"/>
+                                        <exclude reference="7HL-JK-Urk"/>
+                                        <exclude reference="HMH-zV-9cU"/>
+                                        <exclude reference="Qm8-1r-NUr"/>
+                                        <exclude reference="m1Z-xb-VMq"/>
+                                        <exclude reference="o8O-uF-JJL"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CH5-me-ahm">
+                                <rect key="frame" x="0.0" y="600" width="600" height="96"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="w5W-zW-GhF">
+                                        <rect key="frame" x="8" y="12" width="292" height="73"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="banner image" translatesAutoresizingMaskIntoConstraints="NO" id="LOa-I4-KX3">
+                                                <rect key="frame" x="0.0" y="0.0" width="67" height="73"/>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="xib-cL-Tya">
+                                                <rect key="frame" x="82" y="13" width="210" height="47"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="New Encrypted Results" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1z-fb-lTp">
+                                                        <rect key="frame" x="0.0" y="0.0" width="210" height="24"/>
+                                                        <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="20"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Try Secure Search" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x7P-EM-w1Y">
+                                                        <rect key="frame" x="0.0" y="31" width="114" height="17"/>
+                                                        <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="14"/>
+                                                        <color key="textColor" red="0.61960784310000006" green="0.61960784310000006" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzd-Sx-hIM">
+                                        <rect key="frame" x="580" y="0.0" width="12" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="JqY-pa-nQu"/>
+                                            <constraint firstAttribute="width" constant="12" id="xul-EZ-cdZ"/>
+                                        </constraints>
+                                        <state key="normal" image="close banner button"/>
+                                        <connections>
+                                            <action selector="tapCloseBannerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ekF-g7-4WD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="hzd-Sx-hIM" firstAttribute="top" secondItem="CH5-me-ahm" secondAttribute="top" id="Ohd-oP-VTv"/>
+                                    <constraint firstItem="hzd-Sx-hIM" firstAttribute="leading" secondItem="CH5-me-ahm" secondAttribute="leading" constant="580" id="bR7-v9-dKc"/>
+                                    <constraint firstAttribute="bottom" secondItem="w5W-zW-GhF" secondAttribute="bottom" id="m7c-xn-bcm"/>
+                                    <constraint firstItem="w5W-zW-GhF" firstAttribute="top" secondItem="CH5-me-ahm" secondAttribute="top" id="rBT-ZN-0TO"/>
+                                    <constraint firstItem="w5W-zW-GhF" firstAttribute="leading" secondItem="CH5-me-ahm" secondAttribute="leading" constant="15" id="wcU-Vu-mTX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96862745100000003" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="kbB-7F-MRE" firstAttribute="top" secondItem="y8o-xU-Wjf" secondAttribute="bottom" constant="45" id="9ba-RR-lDE"/>
+                            <constraint firstItem="CH5-me-ahm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="580" id="ChB-9J-tzk"/>
+                            <constraint firstItem="ujX-fg-44S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fbw-Jk-o0j"/>
+                            <constraint firstItem="kbB-7F-MRE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WaT-zu-4EG"/>
+                            <constraint firstItem="y8o-xU-Wjf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mRq-NR-HUI"/>
+                            <constraint firstItem="y8o-xU-Wjf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qwM-WJ-SeD"/>
+                            <constraint firstItem="kbB-7F-MRE" firstAttribute="leading" secondItem="y8o-xU-Wjf" secondAttribute="leading" constant="56" id="t70-5L-9Ua"/>
+                            <constraint firstItem="ujX-fg-44S" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-14" id="uPG-7a-tcg"/>
+                            <constraint firstItem="CH5-me-ahm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yg2-3W-CwZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bannerView" destination="CH5-me-ahm" id="t86-17-DK7"/>
+                        <outlet property="bannerViewTopConstraint" destination="ChB-9J-tzk" id="9H6-H3-28l"/>
+                        <outlet property="searchLogo" destination="y8o-xU-Wjf" id="Ab4-hd-L3I"/>
+                        <outlet property="searchLogoCenterYConstraint" destination="qwM-WJ-SeD" id="Nk1-md-JWO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304" y="308"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="banner image" width="67" height="73"/>
+        <image name="close banner button" width="12" height="12"/>
+        <image name="mic button" width="65" height="66"/>
+        <image name="search logo" width="145" height="35"/>
+    </resources>
+</document>
